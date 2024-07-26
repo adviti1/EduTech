@@ -1,6 +1,6 @@
 import './App.css';
 import Land from './Land.js'
-import Login from './Form.js'
+import Form from './Form.js'
 
 function App() {
   return (
