@@ -7,7 +7,7 @@ html, body, #root {
   display:inline-block;
 }
 .logo {
-  width: 10vw;
+  width: 15vw;
   height: 10vh;
   background-image: url("edu-tech-high-resolution-logo-black-transparent.png");
   background-size: contain;
@@ -19,13 +19,43 @@ html, body, #root {
   z-index: 1000; /* Ensure it's on top of other elements */
   display:inline-block;
 }
-.search-container{
-  top:0;
-  right:0;
-  display:inline-block;
-  border-color: black;
-  border-radius: 60px;
+.search-container {
+  position: fixed; /* Position the container relative to the viewport */
+  top: 10px; /* Adjust the distance from the top */
+  right: 10px; /* Adjust the distance from the right */
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Center the items vertically */
+  background-color: white; /* Background color of the container */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for better visibility */
+  /* Space inside the container */
 }
+
+.search-container input[type="text"] {
+  border: none; /* Remove default border */
+  padding: 10px; /* Space inside the input field */
+  border-radius: 5px 0 0 5px; /* Rounded corners for the input */
+  outline: none; /* Remove the default focus outline */
+  width: 200px; /* Width of the input field */
+}
+
+.search-container button {
+  border: none; /* Remove default border */
+  background-color: #050605; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 15px; /* Space inside the button */
+  border-radius: 0 5px 5px 0; /* Rounded corners for the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.search-container button:hover {
+  background-color: #1f12b3; /* Darker background on hover */
+}
+
+.search-container button i {
+  font-size: 16px; /* Icon size */
+}
+
 .App {
   display: flex;
   justify-content: center;
@@ -50,15 +80,41 @@ html, body, #root {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:50px;
+}
+.h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.b1{
+  position: absolute;
+  bottom:10vh;
+  left:8vw; 
+  border-radius: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 0 4px 10px rgba(35, 34, 34, 0.4);
+}
 .card1 {
-  background-color: white;
-  border-radius: 10px;
+  background-color: rgb(184, 208,213);
+  box-shadow: 0 4px 10px rgba(35, 34, 34, 0.4);
+  border-color: white;
+  border-radius: 55px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   width:30vw;
   height:60vh;
-  left:0px;
+  position: absolute;
+  top:25vh;
+  left: 10vw;
+  width: 20vw; 
+  height: 60vh;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding:0;
+  margin:0;
+  padding: 20px; 
 }
+
 
 .card h2 {
   margin: 0 0 10px;

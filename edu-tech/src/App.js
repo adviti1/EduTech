@@ -4,15 +4,15 @@ function App() {
   return (
     <div className="App">
     <div className="logo"></div>
-    {/* <div className="search-container">
+    <div className="search-container">
           <input type="text" placeholder="Search.." name="search" />
           <button type="submit"><i className="fa fa-search"></i></button>
-      </div> */}
+      </div>
       <div className="part1">
         <div className="card1">
-          <h2>Start Your Learning Journey Today</h2>
-          <p>Sign Up for Free!</p>
-          <button>Sign Up</button>
+          <h1 className="h1">Start Your Learning Journey Today!</h1>
+          <p className="h2">Sign Up for Free!</p>
+          <button className="b1">Sign Up</button>
         </div>
         {/* <div className="card">
           <h2>Master Coding for Free: Dive into Courses for Every Programming Language!</h2>
