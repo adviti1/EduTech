@@ -1,0 +1,89 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+.nav{
+  display:flex;
+  display:inline-block;
+}
+.logo {
+  width: 10vw;
+  height: 10vh;
+  background-image: url("edu-tech-high-resolution-logo-black-transparent.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+  top: 40px;
+  left: 40px;
+  position: fixed;
+  z-index: 1000; /* Ensure it's on top of other elements */
+  display:inline-block;
+}
+.search-container{
+  top:0;
+  right:0;
+  display:inline-block;
+  border-color: black;
+  border-radius: 60px;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: url("Group 14.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card1 {
+  background-color: white;
+  border-radius: 10px;
+  width:30vw;
+  height:60vh;
+  left:0px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin: 0 0 10px;
+}
+
+.card p {
+  margin: 0 0 20px;
+}
+
+.card1 button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.language-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
