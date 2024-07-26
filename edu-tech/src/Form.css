@@ -1,0 +1,11 @@
+.back{
+    background-image: url("Landing-page.png");
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
