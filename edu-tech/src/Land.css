@@ -1,0 +1,179 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+  }
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url("Landing-page.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .logo {
+    width: 15vw;
+    height: 10vh;
+    background-image: url("edu-tech-high-resolution-logo-black-transparent.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: black;
+    top: 40px;
+    left: 40px;
+    position: fixed;
+    z-index: 1000; 
+    display:inline-block;
+  }
+  .search-container {
+    position: fixed; 
+    top: 40px; 
+    right: 10px; 
+    display: flex; 
+    align-items: center; 
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .search-container input[type="text"] {
+    border: none;
+    padding: 10px; 
+    border-radius: 5px 0 0 5px; 
+    outline: none; 
+  }
+  
+  .search-container button {
+    border: none; 
+    background-color: #050605; 
+    color: white; 
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer; 
+  }
+  
+  .search-container button:hover {
+    background-color: #1f12b3; 
+  }
+  
+  .search-container button i {
+    font-size: 15px; 
+  }
+  .card1 {
+    background-color: rgb(184, 208,213);
+    box-shadow: 0 4px 10px rgba(35, 34, 34, 0.4);
+    border-color: white;
+    border-radius: 55px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width:30vw;
+    height:75vh;
+    position: absolute;
+    top:20vh;
+    left: 20vw;
+    width: 20vw; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding:0;
+    margin:0;
+    padding: 20px; 
+  }
+  .ch1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:50px;
+  }
+  .ch2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px; 
+    top:65vh;
+    bottom:0;
+    left:24.5vw;
+    position:fixed;
+  }
+  .card1 button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom:10vh;
+    left:7vw; 
+    size:50px;
+    border-radius: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0 4px 10px rgba(35, 34, 34, 0.4);
+  }
+  .card2 {
+    background-color: rgb(184, 208,213);
+    border-radius: 20px;
+    padding: 25px;
+    width:40vw;
+    height:36vh;
+    top:20vh;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+  }
+  .card2 h2 {
+    margin: 0 0 10px;
+    font-size: 25px;
+  }
+  .container{
+    position:relative;
+    top:5vh;
+  }
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-inner .item {
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-inner .item.active {
+    display: flex;
+  }
+  
+  .img {
+    margin: auto;
+    max-width: 20vw;
+    max-height: 20vh;
+  }
+  .left.carousel-control, .right.carousel-control {
+    background-image: none;
+  }
+  
+  .left.carousel-control {
+    left: 0;
+  }
+  
+  .right.carousel-control {
+    right: 0;
+  }
+  
+  .language-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: white;
+  }
+  
+  .card3 {
+    background-color: rgb(184, 208,213);
+    border-radius: 20px;
+    padding: 20px;
+    width:40vw;
+    height:36vh;
+    top:58vh;
+    left: 50vw;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+  } 
