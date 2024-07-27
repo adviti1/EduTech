@@ -1,13 +1,19 @@
-import React from 'react';
 import './Land.css';
 import Py from './assets/OIP.jpeg';
 import JS from './assets/OIP1.jpeg';
 import Java from './assets/OIP2.jpeg';
+import { Link } from 'react-router-dom';
+import logo from './assets/edu-tech-high-resolution-logo-black-transparent.png';
+import backg from './assets/Landing-page.png';
 
 function Land() {
   return (
-    <div className="App">
-      <div className="logo"></div>
+    <div className="App" style={{ backgroundImage: `url(${backg})`, backgroundPosition: 'center', height: '100vh' }}>
+      <div className="logo">
+        <Link to="/form">
+        <img src={logo} alt="Edu-Tech Logo" />
+        </Link>
+      </div>
       <div className="search-container">
         <input type="text" placeholder="Search.." name="search" />
         <button type="submit"><i className="fa fa-search"></i></button>
@@ -52,9 +58,7 @@ function Land() {
           </div>
         </div>
       </div>
-      <div className="card3">
-          
-      </div>
+      <div className="card3"></div>
     </div>
   );
 }
