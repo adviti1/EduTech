@@ -7,8 +7,8 @@ function App() {
   return (
     <div>
    {/* <Land/> */}
-   {/* <Form/> */}
-   <Button/>
+   <Form/>
+   {/* <Button/> */}
     </div>
   );
 }

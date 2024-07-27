@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { auth } from './firebase';
+import { auth, db } from './firebase';
+import { setDoc, doc } from "firebase/firestore";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import logo from './assets/edu-tech-high-resolution-logo-black-transparent.png';
 import './Form.css';
@@ -15,8 +18,20 @@ export default function Form() {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       setUser(userCredential.user);
+      if (userCredential.user) {
+        await setDoc(doc(db, "Users", userCredential.user.uid), {
+          email: userCredential.user.email
+        });
+      }
+      console.log("User registered successfully");
+      toast.success("User Registered successfully", {
+        position: "top-center",
+      });
     } catch (error) {
       console.error("Error signing up: ", error.message);
+      toast.error(error.message, {
+        position: "bottom-center",
+      });
     }
   };
 
@@ -25,8 +40,15 @@ export default function Form() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       setUser(userCredential.user);
+      console.log("User signed in successfully");
+      toast.success("User signed in successfully", {
+        position: "top-center",
+      });
     } catch (error) {
       console.error("Error signing in: ", error.message);
+      toast.error(error.message, {
+        position: "bottom-center",
+      });
     }
   };
 
@@ -34,13 +56,21 @@ export default function Form() {
     try {
       await signOut(auth);
       setUser(null);
+      console.log("User signed out successfully");
+      toast.success("User signed out successfully", {
+        position: "top-center",
+      });
     } catch (error) {
-      console.error("Error signing out: ", error);
+      console.error("Error signing out: ", error.message);
+      toast.error(error.message, {
+        position: "bottom-center",
+      });
     }
   };
 
   return (
     <div className="back">
+      <ToastContainer />
       {user ? (
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
