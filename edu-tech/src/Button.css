@@ -1,0 +1,42 @@
+.Pay {
+    position: absolute;  /* Position the button absolutely */
+    top: 50%;            /* Move it to the vertical center */
+    left: 50%;           /* Move it to the horizontal center */
+    transform: translate(-50%, -50%);  /* Adjust the positioning */
+    padding: 10px 20px;  /* Add some padding */
+    background-color: #007BFF;  /* Set background color */
+    color: white;        /* Set text color */
+    border: none;        /* Remove border */
+    border-radius: 5px;  /* Add border radius */
+    cursor: pointer;     /* Change cursor on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Add shadow */
+    font-size: 16px;     /* Set font size */
+  }
+  
+  .Pay:hover {
+    background-color: #0056b3;  /* Darken the background on hover */
+  }
+  .App{
+        background-image: url("./assets/Landing-page.png");
+        width:100vw;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+  }
+  .App div{
+    width:50vw;
+    height:50vh;
+    background-color: white;
+  }
+  .App h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    position: absolute;
+    left:45vw;  
+    top:30vh
+  }
