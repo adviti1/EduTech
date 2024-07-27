@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { auth, db } from './firebase';
 import { setDoc, doc } from "firebase/firestore";
 import { ToastContainer, toast } from 'react-toastify';
@@ -74,11 +75,13 @@ export default function Form() {
       {user ? (
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img
-              alt="Your Company"
-              src={logo}
-              className="mx-auto h-10 w-auto"
-            />
+            <Link to="/">
+              <img
+                alt="Your Company"
+                src={logo}
+                className="mx-auto h-10 w-auto"
+              />
+            </Link>
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
               Welcome, {user.email}
             </h2>
@@ -93,11 +96,13 @@ export default function Form() {
       ) : (
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img
-              alt="Your Company"
-              src={logo}
-              className="mx-auto h-10 w-auto"
-            />
+            <Link to="/">
+              <img
+                alt="Your Company"
+                src={logo}
+                className="mx-auto h-10 w-auto"
+              />
+            </Link>
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
               {account === 'login' ? 'Log In' : 'Sign Up'}
             </h2>

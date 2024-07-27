@@ -1,5 +1,5 @@
 .back{
-    background-image: url("Landing-page.png");
+    background-image: url("./assets/Landing-page.png");
     width:100vw;
     height:100vh;
     display: flex;

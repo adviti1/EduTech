@@ -1,3 +1,4 @@
+import React from 'react';
 import './Land.css';
 import Py from './assets/OIP.jpeg';
 import JS from './assets/OIP1.jpeg';
