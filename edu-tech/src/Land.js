@@ -5,14 +5,15 @@ import Java from './assets/OIP2.jpeg';
 import { Link } from 'react-router-dom';
 import logo from './assets/edu-tech-high-resolution-logo-black-transparent.png';
 import backg from './assets/Landing-page.png';
+import Code from './assets/coding.png';
 
 function Land() {
   return (
     <div className="App" style={{ backgroundImage: `url(${backg})`, backgroundPosition: 'center', height: '100vh' }}>
       <div className="logo">
-        <Link to="/form">
+      
         <img src={logo} alt="Edu-Tech Logo" />
-        </Link>
+        
       </div>
       <div className="search-container">
         <input type="text" placeholder="Search.." name="search" />
@@ -22,7 +23,11 @@ function Land() {
         <div className="card1">
           <h1 className="ch1">Start Your Learning Journey Today!</h1>
           <p className="ch2">Sign Up for Free!</p>
-          <button>Sign Up</button>
+          <button className="signup-button">
+            <Link to="/form" className="signup-link">
+              Sign Up
+            </Link>
+          </button>
         </div>
         <div className="card2">
           <h2>Master Coding for Free: Dive into Courses for Every Programming Language!</h2>
@@ -58,7 +63,8 @@ function Land() {
           </div>
         </div>
       </div>
-      <div className="card3"></div>
+      <div className="card3"> <h2>Master Coding for Free: Dive into Courses for Every Programming Language!</h2>
+      <img src={Code} alt="code screen" /></div>
     </div>
   );
 }

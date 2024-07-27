@@ -192,3 +192,15 @@ body,
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: absolute;
 }
+.card3 h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  font-weight: bold;
+ }
+ .card3 img{
+   width:10vw;
+   height:20vh;
+   position : absolute;
+   top :10vh;
+   left:16vw;
+ }

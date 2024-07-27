@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth, db } from './firebase';
 import { setDoc, doc } from "firebase/firestore";
 import { ToastContainer, toast } from 'react-toastify';
@@ -13,6 +13,7 @@ export default function Form() {
   const [password, setPassword] = useState('');
   const [account, setAccount] = useState('login');
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -28,6 +29,7 @@ export default function Form() {
       toast.success("User Registered successfully", {
         position: "top-center",
       });
+      navigate('/button');
     } catch (error) {
       console.error("Error signing up: ", error.message);
       toast.error(error.message, {
@@ -45,6 +47,7 @@ export default function Form() {
       toast.success("User signed in successfully", {
         position: "top-center",
       });
+      navigate('/button');
     } catch (error) {
       console.error("Error signing in: ", error.message);
       toast.error(error.message, {
