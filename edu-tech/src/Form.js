@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { auth, db } from './firebase';
+import { auth, db, provider, signInWithPopup, signOut } from './firebase';
 import { setDoc, doc } from "firebase/firestore";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import logo from './assets/edu-tech-high-resolution-logo-black-transparent.png';
 import './Form.css';
 
@@ -66,6 +66,29 @@ export default function Form() {
       });
     } catch (error) {
       console.error("Error signing out: ", error.message);
+      toast.error(error.message, {
+        position: "bottom-center",
+      });
+    }
+  };
+
+  const handleGoogleSignIn = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      setUser(user);
+      if (user) {
+        await setDoc(doc(db, "Users", user.uid), {
+          email: user.email
+        });
+      }
+      console.log("User signed in with Google successfully");
+      toast.success("User signed in with Google successfully", {
+        position: "top-center",
+      });
+      navigate('/button');
+    } catch (error) {
+      console.error("Error signing in with Google: ", error.message);
       toast.error(error.message, {
         position: "bottom-center",
       });
@@ -165,6 +188,15 @@ export default function Form() {
                 </button>
               </div>
             </form>
+
+            <div className="mt-6">
+              <button
+                onClick={handleGoogleSignIn}
+                className="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+              >
+                Sign in with Google
+              </button>
+            </div>
 
             <p className="mt-10 text-center text-sm text-gray-500">
               {account === 'login' ? (

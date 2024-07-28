@@ -14,7 +14,9 @@
   }
   
   .Pay:hover {
-    background-color: #0056b3;  
+    background-color: #0056b3; 
+  }
+
   .App{
         background-image: url("./assets/Landing-page.png");
         width:100vw;
@@ -26,45 +28,78 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
   }
+
   .App div{
     width:50vw;
     height:50vh;
     background-color: white;
   }
+  
   .App h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
+    font-size: xx-large;
     font-weight: bold;
     position: absolute;
-    left:45vw;  
+    left:38vw;  
     top:30vh
-  } */
-
+  } 
 
   .App {
     background-image: url("./assets/Landing-page.png");
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;  /* Stack elements vertically */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-}
+} */
 
-.Pay {
-    padding: 10px 20px;
+/* .Pay {
+    padding: 20px 40px;
     background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-}
+    font-size: 20px;
+} */
 
-.Pay:hover {
+/* .Pay2 {
+  padding: 20px 40px;
+  background-color: #0c3f75;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+} */
+
+/* .Pay:hover {
     background-color: #0056b3;
+} */
+.Pay {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px; /* Add some space between the buttons */
+  display: inline-block;
+}
+.Pay2 {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
 }
