@@ -432,3 +432,46 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2024-07-28T14:23:07.096Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createPaymentIntent"},"extension":{},"message":"Finishing up request with event=finish"}}
 [debug] [2024-07-28T14:23:07.097Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createPaymentIntent"},"extension":{},"message":"Finishing up request with event=close"}}
 [debug] [2024-07-28T14:23:07.099Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-07-28T15:25:07.988Z] File D:\GitHub\EduTech\edu-tech\functions\package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File D:\\GitHub\\EduTech\\edu-tech\\functions\\package.json changed, reloading triggers"}}
+[debug] [2024-07-28T15:25:09.060Z] Validating nodejs source
+[debug] [2024-07-28T15:25:13.072Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0",
+    "stripe": "^16.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-07-28T15:25:13.074Z] Building nodejs source
+[debug] [2024-07-28T15:25:13.075Z] Failed to find version of module node: reached end of search path D:\GitHub\EduTech\edu-tech\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2024-07-28T15:25:13.098Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-07-28T15:25:13.117Z] Found firebase-functions binary at 'D:\GitHub\EduTech\edu-tech\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8768
+
+[debug] [2024-07-28T15:25:14.622Z] Got response from /__/functions.yaml {"endpoints":{"createPaymentIntent":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"createPaymentIntent"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: createPaymentIntent. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createPaymentIntent."}}
+[debug] [2024-07-28T15:25:14.688Z] [worker-pool] Shutting down IDLE worker (us-central1-createPaymentIntent) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-createPaymentIntent)"}}
+[debug] [2024-07-28T15:25:14.688Z] [worker-us-central1-createPaymentIntent-ccca5322-b417-4d43-9522-6c92aef89c5b]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createPaymentIntent"},"extension":{},"message":"[worker-us-central1-createPaymentIntent-ccca5322-b417-4d43-9522-6c92aef89c5b]: FINISHING"}}
+[debug] [2024-07-28T15:25:14.705Z] [worker-us-central1-createPaymentIntent-ccca5322-b417-4d43-9522-6c92aef89c5b]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createPaymentIntent"},"extension":{},"message":"[worker-us-central1-createPaymentIntent-ccca5322-b417-4d43-9522-6c92aef89c5b]: exited"}}
+[debug] [2024-07-28T15:25:14.706Z] [worker-us-central1-createPaymentIntent-ccca5322-b417-4d43-9522-6c92aef89c5b]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createPaymentIntent"},"extension":{},"message":"[worker-us-central1-createPaymentIntent-ccca5322-b417-4d43-9522-6c92aef89c5b]: FINISHED"}}
